@@ -6,7 +6,7 @@ import "@nomicfoundation/hardhat-toolbox"
 const PRIVATE_KEY = process.env.PRIVATE_KEY || ""
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.18",
+  solidity: "0.8.20",
   paths: { tests: "tests" },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
