@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
-dotenv.config();
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
+import dotenv from "dotenv"
+dotenv.config()
+import { HardhatUserConfig } from "hardhat/config"
+import "@nomicfoundation/hardhat-toolbox"
 
-const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+const PRIVATE_KEY = process.env.PRIVATE_KEY || ""
 
 const config: HardhatUserConfig = {
   solidity: "0.8.18",
@@ -22,7 +22,11 @@ const config: HardhatUserConfig = {
       },
     ],
   },
+  defaultNetwork: "sepolia",
   networks: {
+    hardhat: {
+      chainId: 31337, // Default chainId for the Hardhat Network
+    },
     sepolia: {
       url: process.env.SEPOLIA_RPC_URL || "",
       accounts: [PRIVATE_KEY],
@@ -36,6 +40,6 @@ const config: HardhatUserConfig = {
       accounts: [PRIVATE_KEY],
     },
   },
-};
+}
 
-export default config;
+export default config
