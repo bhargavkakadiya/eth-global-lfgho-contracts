@@ -1,4 +1,3 @@
-// File: test/ConcertTicket.test.js
 import { ethers } from "hardhat"
 import { expect } from "chai"
 import { EventTicket, MyERC20 } from "../typechain-types"
@@ -32,7 +31,10 @@ describe("EventTicket", function () {
 
     eventTicket = await EventTicket.deploy(
       "MyEvent",
-      "ME",
+      "EVT",
+      "MyEventTitle",
+      1708835080,
+      "https://www.eventbrite.hk/e/rewind-party-the-belmont-january-edition-tickets-783786726197",
       totalTickets,
       ticketPrice,
       paymentToken.address
@@ -52,7 +54,6 @@ describe("EventTicket", function () {
 
     beforeEach(async function () {
       addr1PTBalanceBefore = await paymentToken.balanceOf(addr1.address)
-      console.log("Payment Token Balance:", addr1PTBalanceBefore.toString())
 
       // approve the contract to spend the tokens
       const allowTx = await paymentToken
