@@ -21,7 +21,7 @@ yarn hardhat node
 yarn hardhat run scripts/deploy.ts
 ```
 
-## To Deploy on Goerli
+## To Deploy on Sepolia
 
 ```bash
 yarn hardhat run scripts/deploy.ts --network sepolia # deploy
