@@ -15,10 +15,12 @@ contract EventTicket is ERC721, Ownable {
   event TicketBought(address indexed buyer, uint256 ticketId);
 
   constructor(
+    string memory name,
+    string memory symbol,
     uint256 _totalTickets,
     uint256 _ticketPrice,
     ERC20 _paymentTokenAddress
-  ) ERC721("EventTicket", "ETK") Ownable(msg.sender) {
+  ) ERC721(name, symbol) Ownable(msg.sender) {
     totalTickets = _totalTickets;
     ticketPrice = _ticketPrice;
     paymentTokenAddress = _paymentTokenAddress;

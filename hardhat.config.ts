@@ -22,7 +22,7 @@ const config: HardhatUserConfig = {
       },
     ],
   },
-  defaultNetwork: "sepolia",
+  // defaultNetwork: "sepolia",
   networks: {
     hardhat: {
       chainId: 31337, // Default chainId for the Hardhat Network
