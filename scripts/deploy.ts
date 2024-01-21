@@ -1,7 +1,7 @@
 import { ethers } from "hardhat"
 
 async function main() {
-  const GHOTokenAddress = "0x5d00fab5f2f97c4d682c1053cdcaa59c2c37900d"
+  const GHOTokenAddress = "0xc4bF5CbDaBE595361438F8c6a187bDc330539c60"
   const contractFactory = await ethers.getContractFactory("EventTicket")
   const contract = await contractFactory.deploy(100, 1, GHOTokenAddress)
 
