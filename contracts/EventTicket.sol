@@ -7,8 +7,8 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract EventTicket is ERC721, Ownable {
   uint256 private _nextTokenId;
-  uint256 public ticketPrice;
   uint256 public totalTickets;
+  uint256 public ticketPrice;
   address public paymentTokenAddress; // GHO token address
 
   event TicketBought(address indexed buyer, uint256 ticketId);
